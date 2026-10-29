@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Hanh Lẻ Năm</title>
+<style>
+:root{--bg:#05070b;--panel:#071724;--blue:#0b3e59;--red:#9e1239;--text:#f2f3f5;--muted:#9ca8b5;--line:rgba(255,255,255,.12);--accent:#8ddcff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 80% 35%,#10334c 0,transparent 38%),radial-gradient(ellipse at 15% 70%,#081d2d 0,transparent 42%),#030507}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.16;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}.wrap{width:min(1080px,92%);margin:auto}.mark{font-weight:900;letter-spacing:-4px;font-size:28px;display:inline-block;transform:skew(-12deg)}.hero{min-height:95vh;display:grid;place-items:center;padding:60px 0}.hero-card{width:100%;min-height:430px;position:relative;overflow:hidden;display:flex;align-items:center;padding:clamp(25px,6vw,80px);background:linear-gradient(115deg,rgba(7,19,31,.98),rgba(4,32,49,.88));border:1px solid var(--line);box-shadow:0 25px 80px #0008}.hero-card:before{content:"";position:absolute;width:300px;height:300px;left:-90px;top:-100px;background:var(--red);border-radius:50%;filter:blur(1px);opacity:.75}.hero-content{position:relative;z-index:1;display:grid;grid-template-columns:150px 1fr;gap:30px;align-items:center;width:100%}.portrait{width:150px;height:175px;background:linear-gradient(145deg,#a80d3c,#172b3b);display:grid;place-items:center;overflow:hidden;border-radius:2px}.portrait img{width:100%;height:100%;object-fit:cover}.portrait .placeholder{font-size:13px;text-align:center;color:#f8dce5;padding:15px}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:3px;text-transform:uppercase}.hero h1{font-size:clamp(40px,8vw,86px);line-height:.92;letter-spacing:-3px;margin:12px 0;font-weight:950;text-transform:uppercase}.year{font-size:clamp(22px,4vw,38px);font-weight:300;color:#c1cbd4;margin-left:14px;white-space:nowrap}.subtitle{font-size:11px;letter-spacing:2px;color:#d5dce2;margin:20px 0 30px}.nav-start{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-block;padding:11px 17px;border:1px solid #e7edf2;color:#fff;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;transition:.25s}.btn.primary{background:#eaf4fa;color:#07121a}.btn:hover{transform:translateY(-3px);background:var(--accent);color:#06121b;border-color:var(--accent)}.section{margin:0 auto 28px;padding:30px clamp(20px,5vw,58px);background:linear-gradient(115deg,rgba(3,8,14,.96),rgba(4,23,36,.92));border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden}.section:before{content:"";position:absolute;width:220px;height:220px;top:-150px;left:-120px;background:#0875a4;filter:blur(80px);opacity:.35}.tabs{position:relative;display:flex;justify-content:center;gap:24px;margin-bottom:35px;flex-wrap:wrap}.tabs a{font-size:9px;color:#82909b;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;border-radius:20px}.tabs a.active,.tabs a:hover{background:#d8effb;color:#07131d}.about-grid{position:relative;display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}.about-photo{min-height:330px;display:grid;place-items:center;background:radial-gradient(ellipse,#0d5272,#08141d 65%);border:1px solid var(--line);overflow:hidden}.about-photo img{width:100%;height:100%;min-height:330px;object-fit:cover}.photo-placeholder{padding:25px;text-align:center;color:#9ab6c8;font-size:12px;line-height:1.8}.kicker{font-size:10px;letter-spacing:2px;color:var(--accent);text-transform:uppercase}.section h2{font-size:clamp(26px,4vw,42px);text-transform:uppercase;letter-spacing:-1px;margin:10px 0 18px}.about-copy{font-size:13px;color:#aab5be;line-height:1.8;max-width:610px}.skills{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0}.skill{width:42px;height:42px;border:1px solid var(--line);display:grid;place-items:center;background:#0c1b27;font-weight:800;font-size:12px}.skill:nth-child(2){color:#8ab9ff}.skill:nth-child(3){color:#c3a8ff}.skill:nth-child(4){color:#83e0c2}.details{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}.details h3{font-size:11px;letter-spacing:1px;text-transform:uppercase}.details p{font-size:11px;color:#9eabb6;line-height:1.8}.project-heading{text-align:center;position:relative;margin-bottom:28px}.project-heading h2{margin-bottom:5px}.project-heading small{color:var(--accent);font-size:10px;letter-spacing:2px}.projects{position:relative;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:12px}.project{position:relative;overflow:hidden;background:linear-gradient(135deg,#193b4d,#10151d);border:1px solid var(--line);display:flex;align-items:end;padding:15px;transition:.3s}.project:nth-child(2n){background:linear-gradient(145deg,#6c1737,#15121a)}.project:nth-child(3n){background:linear-gradient(135deg,#d1d4d6,#303b45);color:#10141a}.project:nth-child(1),.project:nth-child(6){grid-row:span 2}.project:nth-child(4){grid-column:span 2}.project:hover{transform:translateY(-4px);filter:brightness(1.2)}.project img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78}.project span{position:relative;z-index:1;font-size:11px;letter-spacing:1px;text-transform:uppercase;text-shadow:0 2px 8px #000}.contact-grid{position:relative;display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:center}.contact-photo{width:180px;height:180px;border-radius:50%;background:linear-gradient(135deg,#8a9d9f,#1b2931);overflow:hidden;display:grid;place-items:center;border:4px solid #d7eaf3}.contact-photo img{width:100%;height:100%;object-fit:cover}.contact-photo span{font-size:12px;color:#17222a;text-align:center;padding:15px}.socials{display:flex;flex-direction:column;gap:12px;margin-top:20px}.socials a{font-size:11px;color:#b5c2cc;letter-spacing:1px}.socials a:hover{color:var(--accent)}.thank{text-align:center}.thank h2{font-size:clamp(40px,7vw,76px);line-height:.95;margin:0}.thank p{color:var(--accent);font-size:12px;letter-spacing:3px}.footer{text-align:center;padding:35px 10px 50px;color:#677582;font-size:10px;letter-spacing:2px}
+@media(max-width:700px){.hero{min-height:80vh}.hero-card{min-height:380px;padding:28px 20px}.hero-content{grid-template-columns:1fr;gap:22px}.portrait{width:100px;height:110px}.hero h1{letter-spacing:-2px}.year{display:block;margin:10px 0 0}.about-grid,.contact-grid{grid-template-columns:1fr;gap:25px}.about-photo,.about-photo img{min-height:260px}.details{gap:14px}.projects{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}.project:nth-child(4){grid-column:span 1}.project:nth-child(1),.project:nth-child(6){grid-row:span 1}.contact-photo{width:145px;height:145px}.thank{text-align:left}.tabs{gap:5px}.section{padding:24px 18px}.hero h1{font-size:48px}}
+</style>
+</head>
+<body>
+<header class="hero wrap" id="home">
+  <div class="hero-card">
+    <div class="hero-content">
+      <div class="portrait"><div class="placeholder">THÊM<br>ẢNH ĐẠI DIỆN</div></div>
+      <div>
+        <div class="eyebrow">Personal Portfolio</div>
+        <h1>Portfolio <span class="year">2026</span></h1>
+        <div class="subtitle">■ &nbsp; CONTENT CREATOR / DEVELOPER</div>
+        <div class="nav-start"><a class="btn primary" href="#about">Start</a><a class="btn" href="#projects">Projects</a><a class="btn" href="#contact">Contact</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <section class="section" id="about">
+    <nav class="tabs"><a class="active" href="#about">Profile</a><a href="#projects">Project</a><a href="#contact">Contact Person</a></nav>
+    <div class="about-grid">
+      <div class="about-photo"><div class="photo-placeholder">THÊM ẢNH CHÂN DUNG<br><br>Ảnh sẽ hiển thị tại đây</div></div>
+      <div>
+        <div class="kicker">Hello, I am</div>
+        <h2>Hanh Lẻ Năm</h2>
+        <div class="kicker">About me</div>
+        <p class="about-copy">Xin chào! Mình là Hanh Lẻ Năm. Mình yêu thích thiết kế giao diện, sáng tạo nội dung và xây dựng những sản phẩm mang phong cách riêng. Đây là portfolio giới thiệu bản thân, kỹ năng và các dự án mình đã thực hiện.</p>
+        <h3 style="font-size:12px;letter-spacing:1px">Software Skills</h3>
+        <div class="skills"><div class="skill">HTML</div><div class="skill">CSS</div><div class="skill">JS</div><div class="skill">UI</div><div class="skill">PS</div></div>
+        <div class="details">
+          <div><h3>Education</h3><p>• Thêm trường học của bạn<br>• Thêm chuyên ngành / khóa học</p></div>
+          <div><h3>Experience</h3><p>• Thiết kế website cá nhân<br>• Sáng tạo nội dung / dự án riêng</p></div>
+          <div><h3>Languages</h3><p>Vietnamese — Native<br>English — Basic</p></div>
+          <div><h3>Interests</h3><p>Design · Technology · Gaming</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="projects">
+    <nav class="tabs"><a href="#about">Profile</a><a class="active" href="#projects">Project</a><a href="#contact">Contact Person</a></nav>
+    <div class="project-heading"><div class="kicker">Selected works</div><h2>Recap Project 2026</h2><small>DESIGN · WEB · CREATIVE</small></div>
+    <div class="projects">
+      <a class="project" href="#contact"><span>01 — Website</span></a>
+      <a class="project" href="#contact"><span>02 — Branding</span></a>
+      <a class="project" href="#contact"><span>03 — Poster</span></a>
+      <a class="project" href="#contact"><span>04 — UI Design</span></a>
+      <a class="project" href="#contact"><span>05 — Creative</span></a>
+      <a class="project" href="#contact"><span>06 — Personal work</span></a>
+      <a class="project" href="#contact"><span>07 — Experiment</span></a>
+      <a class="project" href="#contact"><span>08 — More projects</span></a>
+    </div>
+  </section>
+  <section class="section" id="contact">
+    <nav class="tabs"><a href="#about">Profile</a><a href="#projects">Project</a><a class="active" href="#contact">Contact Person</a></nav>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-photo"><span>THÊM<br>ẢNH CỦA BẠN</span></div>
+        <div class="kicker" style="margin-top:18px">Contact me</div>
+        <h2 style="font-size:24px;margin-bottom:8px">Hanh Lẻ Năm</h2>
+        <div class="socials">
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">◉ &nbsp; FACEBOOK — thêm link của bạn</a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer">♪ &nbsp; TIKTOK — thêm link của bạn</a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">▶ &nbsp; YOUTUBE — thêm link của bạn</a>
+          <a href="https://discord.com/" target="_blank" rel="noreferrer">◈ &nbsp; DISCORD — thêm link của bạn</a>
+        </div>
+      </div>
+      <div class="thank"><h2>Thank<br>You</h2><p>SEE YOU · 2026</p><a class="btn" href="#home">Back to top ↑</a></div>
+    </div>
+  </section>
+</main>
+<footer class="footer">© 2026 HANH LẺ NĂM · PERSONAL PORTFOLIO</footer>
+</body>
+</html>
